@@ -1,11 +1,27 @@
-<ul class="list-group">
-  <% @articles.each do |article| %>
-    <li class="list-group-item list-group-item-action">
-      <%= link_to article.title, article %>
-    </li>
-  <% end %>
-</ul>
-<br>
-<%= link_to "New Article", new_article_path, class:"btn btn-primary" %>
-<br><br>
+<div class="card">
+  <div class="card-header bg-primary text-light">
+    <h2>Article List</h2>
+  </div>
+  <div class="card-body">
+    <ul class="list-group">
+      <% @articles.each do |article| %>
+        <li class="list-group-item list-group-item-action">
+          <%= link_to article.title, article %>
+        </li>
+      <% end %>
+    </ul>
+    <br>
+    <%= link_to "New Article", new_article_path, class:"btn btn-primary" %>
+    <br>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
 
