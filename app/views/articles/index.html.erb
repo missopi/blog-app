@@ -7,6 +7,9 @@
       <% @articles.each do |article| %>
         <li class="list-group-item list-group-item-action">
           <%= link_to article.title, article %>
+          <br>
+          <% time = article.created_at %>
+          <%= time.to_formatted_s(:long)%>
         </li>
       <% end %>
     </ul>
